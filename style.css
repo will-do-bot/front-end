@@ -1,0 +1,101 @@
+
+body, html{
+    margin:0;
+    font-size: 16px;
+    height: 100%;
+    font-family: 'Roboto Slab', serif;    
+}
+
+p {
+    margin: 0;
+}
+
+.todo {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+.sidebar-hidden{
+    display: none;
+    background-color: #3b5998;
+    color: white;
+}
+.sidebar{
+    background-color: #3b5998;
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+    transition: all 0.4s;
+}
+
+.sidebar-top {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.sidebar-item {
+    color: white;
+    text-align: center;
+}
+
+
+.logo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.title{
+    display: inline-block;
+    color: #222;
+    font-size: 3em;
+    border-bottom: solid #3b5998 2px;
+    padding: 10% 0 0 10%;
+}
+
+.username {
+    font-size: 1.2em;
+}
+
+.user-img{
+    height: 100px;
+    border-radius: 20%;
+    border: solid white;
+}
+
+.logo-img {
+    height: 100px;
+    width: auto;
+}
+.menu-first{ 
+    border-top: solid 2px rgba(116, 133, 169, 0.4);       
+}
+.menu {
+    border-bottom: solid 2px rgba(116, 133, 169, 0.4);
+    padding: 5% 0;
+}
+
+.menu-item{
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.active , .menu:hover{ 
+    background-color: #9DB4E4;
+    color: #222;
+}
+
+.logo-text {
+    font-size: 1.5em;
+    color: white;
+    display: inline;
+}
+
+.top-content {
+    background-color: #9DB4E4;
+    height: 30%;
+}
+
+.bottom-content{
+    height: 100%;
+}
