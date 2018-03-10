@@ -5,74 +5,24 @@
     <meta charset="UTF-8">
     <title>Project</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="style.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="auth.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="script.js"></script>
+    <script src="style.js"></script>
 </head>
 
-<body>
+<body ng-app="willdo">
     <div class="todo">
-        <div class="sidebar">
-            <div class="sidebar-top">
-                <div class="sidebar-item logo">
-                </div>
-                <div class="sidebar-item user">
-                    <img class='user-img' src="https://avatars3.githubusercontent.com/u/15956455?s=100&v=4" alt="User photo">
-                    <p class="username">Matheus de Assis</p>
-                </div>
-            </div>
-            <div class="sidebar-bottom">
-                <div onclick='changeActive(this)' class="sidebar-item menu menu-first">
-                    <a href="#" class="menu-item">PROJECTS</a>
-                </div>
-                <div onclick='changeActive(this)' class="sidebar-item menu active">
-                    <a href="#" class="menu-item">TASKS</a>
-                </div>
-                <div onclick='changeActive(this)' class="sidebar-item menu">
-                    <a href="#" class="menu-item">CHARTS </a>
-                </div>
-                <div onclick='changeActive(this)' class="sidebar-item menu">
-                    <a href="#" class="menu-item">CALENDAR</a>
-                </div>
-                <div onclick='changeActive(this)' class="sidebar-item menu">
-                    <a href="#" class="menu-item">COMMANDS</a>
-                </div>
+        <div ng-include src='"/template/sidebar.html"'></div>
 
-            </div>
-        </div>
-        <div class="sidebar-hidden">
-            <p onclick="toggleSidebarHidden()">Menu</p>
-        </div>
-        <div class="content">
-            <div class="top-content">
-                <p class="title">Swampum</p>
-                <p class="sub-title">SHARE SOMETHING REAL!</p>
-            </div>
-            <div class="bottom-content">
-                <div class="bottom-content-title">
-                    <p>Tasks</p>
-
-                </div>
-                <div class="grid">
-                    <div class="grid-item">
-                        <p class="grid-text">Facebook Login</p>
-                    </div>
-                    <div class="grid-item">
-                        <p class="grid-text">Facebook Login</p>
-                    </div>
-                    <div class="grid-item">
-                        <p class="grid-text">Facebook Login</p>
-                    </div>
-                    <div class="grid-item">
-                        <p class="grid-text">Facebook Login</p>
-                    </div>
-                    <div class="grid-item">
-                        <p class="grid-text">Facebook Login</p>
-                    </div>
-                </div>
-            </div>
+        <div ng-view>
         </div>
     </div>
+
+
 </body>
 
 </html>
